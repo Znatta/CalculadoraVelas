@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculAndreia</title>
+    <!-- Adicionando Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #calculatorForm {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Vel(h)inhas</h1>
+
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="input1">Peso da vela (g):</label>
+                <input type="number" class="form-control" id="input1" required>
+            </div>
+            <div class="form-group">
+                <label for="input2">Porcentagem da essência:</label>
+                <input type="number" class="form-control" id="input2" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+        </form>
+
+        <p>Cera: <span id="resultadoCera"></span></p>
+        <p>Essencia: <span id="resultadoEssencia"></span></p>
+    </div>
+
+    <!-- Adicionando Bootstrap JS (opcional, dependendo das suas necessidades) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function calcular() {
+            // Obtendo os valores inseridos
+            var valor1 = parseFloat(document.getElementById('input1').value);
+            var valor2 = parseFloat(document.getElementById('input2').value);
+
+            // Realizando as operações (soma e subtração)
+            var conta1 = 100 + valor2;
+            var resultadoCera = valor1 / ((conta1)/100);
+            var resultadoEssencia = valor1 - resultadoCera;
+
+            // Exibindo os resultados na página
+            document.getElementById('resultadoCera').innerText = resultadoCera.toFixed(2) + "g";
+            document.getElementById('resultadoEssencia').innerText = resultadoEssencia.toFixed(2) + "g";
+        }
+    </script>
+
+</body>
+</html>
