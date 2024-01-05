@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CalculAndreia</title>
+    <title>Vel(h)inhas - Calculadora de Velas</title>
+    <!-- Adicionando Favicon de Vela -->
+    <link rel="icon" type="image/png" href="vela.png">
+
     <!-- Adicionando Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <style>
         body {
             padding: 20px;
+            background-color: #f8f9fa; /* Cor de fundo suave */
         }
 
         h1 {
             text-align: center;
+            color: #6c757d; /* Cor de texto cinza */
         }
 
         #calculatorForm {
             max-width: 400px;
             margin: 0 auto;
+            background-color: #fff; /* Cor de fundo branca */
+            padding: 20px;
+            border-radius: 10px; /* Borda arredondada */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-top: 20px;
         }
 
         label {
             display: block;
             margin-bottom: 5px;
+            color: #495057; /* Cor de texto mais escura */
         }
 
         input {
             width: 100%;
             margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ced4da; /* Borda mais clara */
+            border-radius: 4px;
         }
 
         button {
@@ -36,12 +51,18 @@
             background-color: #007bff;
             color: #fff;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
 
         p {
             margin-top: 20px;
             font-weight: bold;
+            color: #343a40; /* Cor de texto mais escura */
+        }
+
+        table {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -67,15 +88,15 @@
         </form>
 
         <p>Cera: <span id="resultadoCera"></span></p>
-        <p>Essencia: <span id="resultadoEssencia"></span></p>
+        <p>Essência: <span id="resultadoEssencia"></span></p>
 
         <!-- Tabela para mostrar os resultados -->
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Velas</th>
                     <th>Cera (g)</th>
-                    <th>Essencia (g)</th>
+                    <th>Essência (g)</th>
                 </tr>
             </thead>
             <tbody id="tabelaResultados"></tbody>
